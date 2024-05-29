@@ -9,7 +9,7 @@ cap.set(4, 720)
 
 # Importing all images
 imgBackground = cv2.imread("Resources/BackImg.png")
-imgGameOver = cv2.imread("Resources/gameOver.png")
+imgGameOver = cv2.imread("Resources/Over.png")
 imgBall = cv2.imread("Resources/Ball.png", cv2.IMREAD_UNCHANGED)
 imgBat1 = cv2.imread("Resources/bat1.png", cv2.IMREAD_UNCHANGED)
 imgBat2 = cv2.imread("Resources/bat2.png", cv2.IMREAD_UNCHANGED)
@@ -63,8 +63,8 @@ while True:
 
     if gameOver:
         img = imgGameOver
-        cv2.putText(img, str(score[1] + score[0]).zfill(2), (585, 360), cv2.FONT_HERSHEY_COMPLEX,
-                    2.5, (200, 0, 200), 5)
+        cv2.putText(img, str(score[1] + score[0]).zfill(2), (600, 423), cv2.FONT_HERSHEY_COMPLEX,
+                    2.2, (0, 0, 0), 4)
 
     # If game not over move the ball
     else:
@@ -92,4 +92,4 @@ while True:
         speedY = 15
         gameOver = False
         score = [0, 0]
-        imgGameOver = cv2.imread("Resources/gameOver.png")
+        imgGameOver = cv2.imread("Resources/Over.png")
